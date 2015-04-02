@@ -35,6 +35,9 @@ set(BIN_DIR "${CMAKE_INSTALL_PREFIX}")
 set(DOC_DIR "${CMAKE_INSTALL_PREFIX}")
 endif()
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -ggdb")
+set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -O0 -ggdb")
+
 if(MSVC)
   message(FATAL_ERROR "TigerVNC cannot be built with Visual Studio.  Please use MinGW")
 endif()
